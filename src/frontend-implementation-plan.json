@@ -1,0 +1,152 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "DrawdownKing single-page marketing website (frontend)",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "summary": "Build a responsive single-page marketing layout that clearly presents the DrawdownKing brand, purpose, and offerings.",
+      "acceptanceCriteria": [
+        "Landing page renders without errors and prominently displays the DrawdownKing name.",
+        "Page includes clear sections for: Purpose (what it is/why it exists) and Offerings (what is provided).",
+        "Layout is responsive and usable on mobile, tablet, and desktop widths."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "create",
+          "description": "Create the single-page marketing layout composition (hero, purpose, offerings, CTA, footer) and ensure the DrawdownKing name is prominent; keep all copy in English."
+        },
+        {
+          "path": "frontend/index.html",
+          "operation": "modify",
+          "description": "Ensure document metadata supports the marketing site (language already set to English; confirm title remains DrawdownKing)."
+        }
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "summary": "Add a simple marketing-site header with scroll-to navigation and a footer with brand + contact placeholders (no integrations).",
+      "acceptanceCriteria": [
+        "Header navigation links scroll to the correct sections on the page.",
+        "Footer is present and includes brand name plus placeholder contact text (in English).",
+        "No external email/CRM integrations are required for contact placeholders."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/marketing/Header.tsx",
+          "operation": "create",
+          "description": "Create a responsive header with nav links that scroll to on-page sections; use shadcn-ui components (e.g., Button) for consistent interaction styling. Verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/components/marketing/Footer.tsx",
+          "operation": "create",
+          "description": "Create a footer that includes the DrawdownKing brand name and English placeholder contact text (no external integrations)."
+        },
+        {
+          "path": "frontend/src/components/marketing/scrollToSection.ts",
+          "operation": "create",
+          "description": "Add a small utility for consistent scroll-to-section behavior (e.g., handling fixed header offset and smooth scrolling)."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Wire the Header and Footer into the single-page layout and ensure each navigation link targets a corresponding section id."
+        }
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "summary": "Establish and apply a cohesive brand theme (non blue-and-purple dominant) across typography, spacing, and component styling.",
+      "acceptanceCriteria": [
+        "A consistent theme is evident across header, sections, buttons, and footer.",
+        "Theme avoids blue-and-purple as the dominant palette.",
+        "Typography and spacing are consistent across sections."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/index.css",
+          "operation": "create",
+          "description": "Define a cohesive warm/neutral theme (CSS variables for Tailwind/shadcn tokens, base typography, spacing rhythm) that avoids blue-and-purple as the dominant palette; ensure consistent styling across the marketing page. Verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/tailwind.config.js",
+          "operation": "modify",
+          "description": "Adjust Tailwind theme extensions only as needed to support the chosen non-blue/purple brand palette and typography scale consistently across the site."
+        }
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "summary": "Add hero marketing elements (headline, subtext, CTA) and an offerings section rendered as feature cards.",
+      "acceptanceCriteria": [
+        "Hero section contains a headline, a short descriptive paragraph, and at least one CTA button.",
+        "Offerings are shown as distinct cards/tiles with titles and short descriptions.",
+        "All user-facing text is in English."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/marketing/HeroSection.tsx",
+          "operation": "create",
+          "description": "Implement a hero section with English headline, short subtext, and at least one CTA button; use shadcn-ui components (e.g., Button) for CTAs. Verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/components/marketing/OfferingsSection.tsx",
+          "operation": "create",
+          "description": "Implement an offerings section as a small set of feature cards/tiles with English titles and descriptions; use shadcn-ui components (e.g., Card) for consistent presentation. Verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/components/marketing/PurposeSection.tsx",
+          "operation": "create",
+          "description": "Implement a purpose section describing what DrawdownKing is and why it exists (English-only) with responsive layout."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Wire HeroSection, PurposeSection, and OfferingsSection into the single-page flow with appropriate section ids for navigation and a CTA target."
+        }
+      ]
+    },
+    {
+      "id": "REQ-5",
+      "summary": "Add and render generated static brand images (logo, hero illustration/background, and icon set) from static paths.",
+      "acceptanceCriteria": [
+        "Generated images are placed under frontend/public/assets/generated.",
+        "Site references these images via static paths and displays them (logo in header and/or hero; hero visual in hero section).",
+        "No backend endpoints are used to serve or transform images."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/public/assets/generated/drawdownking-logo.dim_512x256.png",
+          "operation": "create",
+          "description": "Add generated static logo asset at the required path: frontend/public/assets/generated/drawdownking-logo.dim_512x256.png."
+        },
+        {
+          "path": "frontend/public/assets/generated/drawdownking-hero-illustration.dim_1600x900.png",
+          "operation": "create",
+          "description": "Add generated static hero illustration asset at the required path: frontend/public/assets/generated/drawdownking-hero-illustration.dim_1600x900.png."
+        },
+        {
+          "path": "frontend/public/assets/generated/drawdownking-icons-set.dim_512x512.png",
+          "operation": "create",
+          "description": "Add generated static icon set asset at the required path: frontend/public/assets/generated/drawdownking-icons-set.dim_512x512.png."
+        },
+        {
+          "path": "frontend/src/components/marketing/Header.tsx",
+          "operation": "modify",
+          "description": "Render the static logo from frontend/public/assets/generated/drawdownking-logo.dim_512x256.png in the header (static asset reference; no backend usage)."
+        },
+        {
+          "path": "frontend/src/components/marketing/HeroSection.tsx",
+          "operation": "modify",
+          "description": "Render the hero visual from frontend/public/assets/generated/drawdownking-hero-illustration.dim_1600x900.png in the hero section and ensure it remains responsive (static asset reference; no backend usage)."
+        },
+        {
+          "path": "frontend/src/components/marketing/OfferingsSection.tsx",
+          "operation": "modify",
+          "description": "Use frontend/public/assets/generated/drawdownking-icons-set.dim_512x512.png to visually support the offering cards (e.g., icon usage per card via cropping/presentation) while keeping a consistent brand style; no backend usage."
+        }
+      ]
+    }
+  ]
+}

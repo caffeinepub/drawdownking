@@ -1,0 +1,71 @@
+{
+  "kind": "spec_vs_diff_report",
+  "version": "1.0",
+  "generatedAt": "2026-02-16T00:26:22.593Z",
+  "summary": "Most frontend marketing-page requirements (single-page layout, responsive sections, header nav with smooth scroll, hero with CTAs, purpose + offerings sections, and a warm non-blue/purple theme) appear implemented. Static image asset placement and the requested generated icon set are not evidenced in the diff, and there are some added elements (external social links/attribution tracking copy per summary) that were not requested.",
+  "missing_requirements": [
+    {
+      "id": "REQ-5",
+      "requirement": "Generated images are placed under frontend/public/assets/generated (logo + hero illustration/background) and referenced from static paths.",
+      "reason": "The code references /assets/generated/*.png, but the diff summary does not show any files added under frontend/public/assets/generated, so placement of the required generated assets is not evidenced.",
+      "evidence": [
+        "frontend/src/components/marketing/Header.tsx",
+        "frontend/src/components/marketing/HeroSection.tsx",
+        "frontend/src/components/marketing/Footer.tsx"
+      ]
+    },
+    {
+      "id": "REQ-5",
+      "requirement": "Include the generated set of 3 simple line icons asset (drawdownking-icons-set.dim_512x512.png).",
+      "reason": "No evidence the icons set image exists under frontend/public/assets/generated or is used anywhere; sections use lucide-react icons instead.",
+      "evidence": [
+        "frontend/src/components/marketing/OfferingsSection.tsx",
+        "frontend/src/components/marketing/PurposeSection.tsx"
+      ]
+    }
+  ],
+  "hallucinated_features": [
+    {
+      "description": "Footer includes external social media links (Twitter/X, LinkedIn, GitHub).",
+      "reason": "BuildRequest only asked for basic brand and contact placeholders in the footer; external social links were not requested.",
+      "evidence": [
+        "frontend/src/components/marketing/Footer.tsx"
+      ]
+    },
+    {
+      "description": "Footer includes 'caffeine.ai attribution with UTM tracking' (per file summary).",
+      "reason": "Not requested in BuildRequest; also suggests tracking-related parameters, which are outside the requested simple placeholder contact/footer scope.",
+      "evidence": [
+        "frontend-file-summaries.txt"
+      ]
+    },
+    {
+      "description": "Backend actor file added with an empty Motoko actor.",
+      "reason": "No backend changes were requested for a frontend marketing website; adding backend code is outside stated requirements.",
+      "evidence": [
+        "backend/main.mo"
+      ]
+    }
+  ],
+  "confidence": 0.66,
+  "changed_files": [
+    "all_files_summary.json",
+    "backend/main.mo",
+    "frontend-file-summaries.txt",
+    "frontend/index.css",
+    "frontend/index.html",
+    "frontend/src/App.tsx",
+    "frontend/src/components/marketing/Footer.tsx",
+    "frontend/src/components/marketing/Header.tsx",
+    "frontend/src/components/marketing/HeroSection.tsx",
+    "frontend/src/components/marketing/OfferingsSection.tsx",
+    "frontend/src/components/marketing/PurposeSection.tsx",
+    "frontend/src/components/marketing/scrollToSection.ts",
+    "frontend/src/hooks/useActor.ts",
+    "frontend/src/hooks/useInternetIdentity.ts",
+    "frontend/src/index.css",
+    "frontend/src/main.tsx",
+    "frontend/tailwind.config.js",
+    "project_state.json"
+  ]
+}

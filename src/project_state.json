@@ -1,0 +1,63 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 3,
+  "summary": "Build a marketing website for DrawdownKing that presents the brand and highlights its purpose and offerings.",
+  "architectural_notes": [],
+  "known_issues": [],
+  "isFixRequest": false,
+  "imageRequirements": "## Required Images\n- Minimalist wordmark logo with crown motif, dark-on-light (drawdownking-logo.dim_512x256.png)\n- Abstract financial drawdown chart hero illustration with bold shapes, warm palette (drawdownking-hero-illustration.dim_1600x900.png)\n- Set of 3 simple line icons matching the brand style (risk, strategy, performance) (drawdownking-icons-set.dim_512x512.png)",
+  "existing_features": [
+    {
+      "id": "feature-create-a-responsive-marketing-website-for-the-drawdownking-brand-with-a-single-page-layout-that-clearly-communicates-the-brand-name-purpose-and-offerings",
+      "title": "Create a responsive marketing website for the DrawdownKing brand with a single-page layout that clearly communicates the brand name, purpose, and offerings.",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-a-simple-navigation-and-page-structure-suitable-for-a-marketing-site-including-a-header-with-navigation-links-scroll-to-sections-and-a-footer-with-basic-brand-and-contact-placeholders-no-external-integrations",
+      "title": "Implement a simple navigation and page structure suitable for a marketing site, including a header with navigation links (scroll-to sections) and a footer with basic brand and contact placeholders (no external integrations).",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-one-cohesive-distinctive-visual-theme-colors-typography-spacing-and-component-style-and-apply-it-consistently-across-the-marketing-site-do-not-use-a-blue-and-purple-theme",
+      "title": "Add one cohesive, distinctive visual theme (colors, typography, spacing, and component style) and apply it consistently across the marketing site. Do not use a blue-and-purple theme.",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-include-basic-on-page-marketing-elements-a-hero-section-with-a-headline-and-short-subtext-at-least-one-call-to-action-button-and-an-offerings-section-presented-as-a-small-set-of-feature-cards",
+      "title": "Include basic on-page marketing elements: a hero section with a headline and short subtext, at least one call-to-action button, and an offerings section presented as a small set of feature cards.",
+      "reqIds": [
+        "REQ-4"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-generated-static-image-assets-for-brand-presentation-logo-hero-illustration-background-and-render-them-in-the-site-from-static-paths-not-via-backend",
+      "title": "Add generated static image assets for brand presentation (logo + hero illustration/background) and render them in the site from static paths (not via backend).",
+      "reqIds": [
+        "REQ-5"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "Create a simple marketing website for DrawdownKing (brand/purpose/offerings)",
+      "reqIds": [],
+      "status": "pending"
+    }
+  ],
+  "gameProjectType": "none",
+  "projectName": "DrawdownKing",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}

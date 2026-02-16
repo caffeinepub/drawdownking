@@ -1,0 +1,127 @@
+{
+  "kind": "build_request",
+  "title": "Marketing website for DrawdownKing",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "text": "Create a responsive marketing website for the DrawdownKing brand with a single-page layout that clearly communicates the brand name, purpose, and offerings.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "build a website for drawdownking"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Landing page renders without errors and prominently displays the DrawdownKing name.",
+        "Page includes clear sections for: Purpose (what it is/why it exists) and Offerings (what is provided).",
+        "Layout is responsive and usable on mobile, tablet, and desktop widths."
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "text": "Implement a simple navigation and page structure suitable for a marketing site, including a header with navigation links (scroll-to sections) and a footer with basic brand and contact placeholders (no external integrations).",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "build a website for drawdownking"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Header navigation links scroll to the correct sections on the page.",
+        "Footer is present and includes brand name plus placeholder contact text (in English).",
+        "No external email/CRM integrations are required for contact placeholders."
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "text": "Add one cohesive, distinctive visual theme (colors, typography, spacing, and component style) and apply it consistently across the marketing site. Do not use a blue-and-purple theme.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "build a website for drawdownking"
+        ]
+      },
+      "acceptanceCriteria": [
+        "A consistent theme is evident across header, sections, buttons, and footer.",
+        "Theme avoids blue-and-purple as the dominant palette.",
+        "Typography and spacing are consistent across sections."
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "text": "Include basic on-page marketing elements: a hero section with a headline and short subtext, at least one call-to-action button, and an offerings section presented as a small set of feature cards.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "build a website for drawdownking"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Hero section contains a headline, a short descriptive paragraph, and at least one CTA button.",
+        "Offerings are shown as distinct cards/tiles with titles and short descriptions.",
+        "All user-facing text is in English."
+      ]
+    },
+    {
+      "id": "REQ-5",
+      "text": "Add generated static image assets for brand presentation (logo + hero illustration/background) and render them in the site from static paths (not via backend).",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "build a website for drawdownking"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Generated images are placed under frontend/public/assets/generated.",
+        "Site references these images via static paths and displays them (logo in header and/or hero; hero visual in hero section).",
+        "No backend endpoints are used to serve or transform images."
+      ]
+    }
+  ],
+  "constraints": [
+    "Use English for all user-facing text.",
+    "Do not edit files in frontend immutablePaths (frontend/src/hooks/useInternetIdentity.ts, frontend/src/hooks/useInternetIdentity.tsx, frontend/src/hooks/useActor.ts, frontend/src/main.tsx, frontend/src/components/ui). Compose existing UI components rather than modifying them.",
+    "Backend must remain single-actor Motoko architecture if backend changes are later introduced."
+  ],
+  "nonGoals": [
+    "User authentication (Internet Identity)",
+    "Blog/CMS functionality",
+    "Real-time features (chat, websockets)",
+    "Third-party integrations for email, analytics, or social logins",
+    "E-commerce or payments"
+  ],
+  "imageRequirements": {
+    "required": [
+      "Minimalist wordmark logo with crown motif, dark-on-light (drawdownking-logo.dim_512x256.png)",
+      "Abstract financial drawdown chart hero illustration with bold shapes, warm palette (drawdownking-hero-illustration.dim_1600x900.png)",
+      "Set of 3 simple line icons matching the brand style (risk, strategy, performance) (drawdownking-icons-set.dim_512x512.png)"
+    ],
+    "edits": []
+  },
+  "userProfileUpdate": {
+    "goalsToAdd": [],
+    "goalsToRemove": [],
+    "preferencesToAdd": [],
+    "preferencesToRemove": [],
+    "miscToAdd": [],
+    "miscToRemove": [],
+    "fieldsToSet": {},
+    "fieldsToDelete": []
+  }
+}

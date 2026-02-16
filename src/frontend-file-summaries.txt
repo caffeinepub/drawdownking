@@ -1,0 +1,11 @@
+{
+  "frontend/src/index.css": "Global styles with warm gold and charcoal OKLCH color system for financial sophistication theme, custom typography scale, and utility classes for both light and dark modes.",
+  "frontend/tailwind.config.js": "Tailwind configuration extended with custom font families (Inter), enhanced shadows (soft, glow), fade-in animation, and warm color palette tokens.",
+  "frontend/src/App.tsx": "Main application component that composes the single-page marketing layout with Header, HeroSection, PurposeSection, OfferingsSection, and Footer.",
+  "frontend/src/components/marketing/Header.tsx": "Fixed header with logo, responsive navigation (desktop/mobile), scroll-based styling, and smooth scroll-to-section functionality.",
+  "frontend/src/components/marketing/HeroSection.tsx": "Hero section with background illustration, headline, subtext, dual CTAs, performance stats, and scroll indicator.",
+  "frontend/src/components/marketing/PurposeSection.tsx": "Purpose section explaining DrawdownKing's mission with three value pillars (Protect Capital, Optimize Strategy, Build Confidence) and detailed mission statement card.",
+  "frontend/src/components/marketing/OfferingsSection.tsx": "Offerings section displaying six feature cards (Calculator, Analytics, Alerts, Data, Reports, Tracking) with icons, badges, and hover effects.",
+  "frontend/src/components/marketing/Footer.tsx": "Footer with brand info, social links, quick navigation, contact placeholders, and caffeine.ai attribution with UTM tracking.",
+  "frontend/src/components/marketing/scrollToSection.ts": "Utility function for smooth scrolling to page sections with fixed header offset compensation."
+}

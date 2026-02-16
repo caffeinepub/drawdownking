@@ -1,0 +1,105 @@
+{
+  "kind": "feature_evidence_report",
+  "features": [
+    {
+      "featureId": "feature-create-a-responsive-marketing-website-for-the-drawdownking-brand-with-a-single-page-layout-that-clearly-communicates-the-brand-name-purpose-and-offerings",
+      "featureTitle": "Create a responsive marketing website for the DrawdownKing brand with a single-page layout that clearly communicates the brand name, purpose, and offerings.",
+      "files": [
+        "frontend/index.html",
+        "frontend/src/App.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-1"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-implement-a-simple-navigation-and-page-structure-suitable-for-a-marketing-site-including-a-header-with-navigation-links-scroll-to-sections-and-a-footer-with-basic-brand-and-contact-placeholders-no-external-integrations",
+      "featureTitle": "Implement a simple navigation and page structure suitable for a marketing site, including a header with navigation links (scroll-to sections) and a footer with basic brand and contact placeholders (no external integrations).",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/marketing/Footer.tsx",
+        "frontend/src/components/marketing/Header.tsx",
+        "frontend/src/components/marketing/scrollToSection.ts"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-2"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-add-one-cohesive-distinctive-visual-theme-colors-typography-spacing-and-component-style-and-apply-it-consistently-across-the-marketing-site-do-not-use-a-blue-and-purple-theme",
+      "featureTitle": "Add one cohesive, distinctive visual theme (colors, typography, spacing, and component style) and apply it consistently across the marketing site. Do not use a blue-and-purple theme.",
+      "files": [
+        "frontend/src/index.css",
+        "frontend/tailwind.config.js"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-3"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-include-basic-on-page-marketing-elements-a-hero-section-with-a-headline-and-short-subtext-at-least-one-call-to-action-button-and-an-offerings-section-presented-as-a-small-set-of-feature-cards",
+      "featureTitle": "Include basic on-page marketing elements: a hero section with a headline and short subtext, at least one call-to-action button, and an offerings section presented as a small set of feature cards.",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/marketing/HeroSection.tsx",
+        "frontend/src/components/marketing/OfferingsSection.tsx",
+        "frontend/src/components/marketing/PurposeSection.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-4"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-add-generated-static-image-assets-for-brand-presentation-logo-hero-illustration-background-and-render-them-in-the-site-from-static-paths-not-via-backend",
+      "featureTitle": "Add generated static image assets for brand presentation (logo + hero illustration/background) and render them in the site from static paths (not via backend).",
+      "files": [
+        "frontend/src/components/marketing/Header.tsx",
+        "frontend/src/components/marketing/HeroSection.tsx",
+        "frontend/src/components/marketing/OfferingsSection.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-5"
+      ],
+      "confidence": "high"
+    }
+  ]
+}
